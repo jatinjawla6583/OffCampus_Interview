@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');          //write req and press enter
 
-
-const dbName = 'OffCampus_Interview';       //no space between name
-
-const url = `mongodb+srv://ashutoshshubham:ashutosh@cluster0.cqjsjz0.mongodb.net/${dbName}?retryWrites=true&w=majority`;
+const url = `mongodb+srv://jatinjawla8:1234@cluster0.m8ohbod.mongodb.net/OffCampus_Drive?retryWrites=true&w=majority`;
 
 mongoose.connect(url)
 //write thenc and press enter
 .then((result) => {
     console.log('database connected')
-})
+})   
 .catch((err) => {
     console.log(err);
 });
