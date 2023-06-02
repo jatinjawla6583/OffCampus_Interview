@@ -21,7 +21,7 @@ const Home = () => {
               className="p-5 text-center bg-image"
               style={{
                 backgroundImage:
-                  'url("/images/hero2.webp")',
+                  'url("https://www.simplilearn.com/ice9/free_resources_article_thumb/SEO-Interview-questions-article-2.jpg")',
                 height: '70vh',
                 backgroundSize: "cover",
                 backgroundPosition: "top",

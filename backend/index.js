@@ -4,6 +4,7 @@ const express = require('express');          //method to import any package, her
 const userRouter = require('./routers/userRouter');
 const addJobsRouter = require('./routers/addJobsRouter');
 const profileRouter = require('./routers/profileRouter');
+const companyRouter = require('./routers/companyRouter');
 
 
 // const feedbackRouter = require('./routers/feedbackRouter');
@@ -41,6 +42,7 @@ app.use(express.json());                 //convert data from json to js
 app.use('/user', userRouter);            //sending request to userRouter
 app.use('/add_jobs', addJobsRouter);     //sending request to addJobsRouter
 app.use('/profile', profileRouter);     //sending request to addJobsRouter
+app.use('/company', companyRouter);     //sending request to addJobsRouter
 
 
 

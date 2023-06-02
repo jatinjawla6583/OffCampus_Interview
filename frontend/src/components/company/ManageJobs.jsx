@@ -3,7 +3,7 @@ import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 
 const ManageJobs = () => {
 
-    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')))
+    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('company')))
     console.log(currentUser);
 
     const [jobData, setJobData] = useState([])
@@ -12,7 +12,7 @@ const ManageJobs = () => {
 
     const fetchCompData = async () => {
         // setLoading(true);
-        const res = await fetch('http://localhost:5000/profile/getbyuser/' + currentUser._id)
+        const res = await fetch('http://localhost:5000/add_jobs/getbyuser/' + currentUser._id)
         // setLoading(false);
         console.log(res.status)
         // console.log(currentUser._id)

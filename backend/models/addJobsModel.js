@@ -13,7 +13,7 @@ const mySchema = new Schema({
     selectionProcess : String,
     interviewLocation : String,
     skillsRequired : String,
-    user : {type : Types.ObjectId, ref: 'users'}
+    user : {type : Types.ObjectId, ref: 'company'}
 }) 
 
 module.exports = model('jobs', mySchema);                           

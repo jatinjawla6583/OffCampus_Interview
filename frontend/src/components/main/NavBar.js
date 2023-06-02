@@ -21,6 +21,16 @@ const NavBar = () => {
                             SignUp
                         </NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/companysignup">
+                            Compant SignUp
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/companylogin">
+                            Compant Login
+                        </NavLink>
+                    </li>
                 </>
             );
         }
@@ -99,6 +109,16 @@ const NavBar = () => {
                                     SignUp
                                 </NavLink>
                             </li>
+                            <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/companysignup">
+                            Compant SignUp
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/companylogin">
+                            Compant Login
+                        </NavLink>
+                    </li>
 
                             {/* {showLoggedIn()} */}
                             {/* {showLogout()} */}

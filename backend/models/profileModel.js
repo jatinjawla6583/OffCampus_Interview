@@ -14,7 +14,7 @@ const mySchema = new Schema({
 })
 
 
-module.exports = model('company', mySchema);                           //users is name of Collection
+module.exports = model('compasddsny', mySchema);                           //users is name of Collection
 
 
 

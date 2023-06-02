@@ -8,7 +8,7 @@ import './style.css'
 
 const Add_jobs = () => {
 
-    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')))
+    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('company')))
     console.log(currentUser);
 
     const jobData = async (formdata, { resetForm }) => {
