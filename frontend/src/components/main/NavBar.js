@@ -23,12 +23,12 @@ const NavBar = () => {
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link text-white" aria-current="page" to="/main/companysignup">
-                            Compant SignUp
+                            Company SignUp
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link text-white" aria-current="page" to="/main/companylogin">
-                            Compant Login
+                            Company Login
                         </NavLink>
                     </li>
                 </>
@@ -91,7 +91,7 @@ const NavBar = () => {
                         <ul className="navbar-nav mb-2 mb-lg-0 fs-5">
                             <li className="nav-item ">
                                 <NavLink className="nav-link text-white" aria-current="page" to="home">
-                                    Home
+                                    home
                                 </NavLink>
                             </li>
                             <li className="nav-item">
@@ -111,12 +111,12 @@ const NavBar = () => {
                             </li>
                             <li className="nav-item">
                         <NavLink className="nav-link text-white" aria-current="page" to="/main/companysignup">
-                            Compant SignUp
+                            Company SignUp
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link text-white" aria-current="page" to="/main/companylogin">
-                            Compant Login
+                            Company Login
                         </NavLink>
                     </li>
 

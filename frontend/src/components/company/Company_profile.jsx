@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const Company_profile = () => {
 
-    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')))
+    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('company')))
     console.log(currentUser);
 
     const profileData = async (formdata, { resetForm }) => {
