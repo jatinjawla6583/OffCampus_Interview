@@ -15,6 +15,7 @@ import More_details from "./components/main/More_details";
 import Company_profile from "./components/company/Company_profile";
 import CompanyLogin from "./components/main/CompanyLogin";
 import CompanySignUp from "./components/main/CompanySignUp";
+import ListCompanies from "./components/main/ListCompanies";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route element={<CompanyLogin />} path='companylogin' />
             <Route element={<CompanySignUp />} path='companysignup' />
             <Route element={<All_Drives />} path='all_drives' />
+            <Route element={<ListCompanies />} path='companylist' />
             <Route element={<More_details />} path='more_details/:driveid' />
             
           </Route>

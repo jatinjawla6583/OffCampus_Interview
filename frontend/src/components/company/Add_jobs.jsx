@@ -68,14 +68,18 @@ const Add_jobs = () => {
                         {
                             ({ values, handleChange, handleSubmit }) => (
                                 <form onSubmit={handleSubmit}>
-
+                                    
+                                    <div className="mt-3">
+                                        <MDBInput label='Designation' id='designation'
+                                            type='text' onChange={handleChange} value={values.designation} rows={4} />
+                                    </div>
                                     <div className="row mt-3">
                                         <div className="col-md-6">
                                             <MDBInput label='Job Type' id='jobType' type='text'
                                                 onChange={handleChange} value={values.jobType} />
                                         </div>
                                         <div className="col-md-6">
-                                            <MDBInput label='Last Date' id='lastDate' type='date'
+                                            <MDBInput label='Last Date to Apply' id='lastDate' type='date'
                                                 onChange={handleChange} value={values.lastDate} />
                                         </div>
                                     </div>
@@ -86,12 +90,12 @@ const Add_jobs = () => {
 
                                    
                                     <div className="mt-3">
-                                        <MDBTextArea label='Courses and Branches' id='course_branch'
+                                        <MDBTextArea label='Eligibility' id='course_branch'
                                             type='text' onChange={handleChange} value={values.course_branch} rows={4} />
                                     </div>
 
                                     <div className="mt-3">
-                                        <MDBTextArea label='Salary' id='salary'
+                                        <MDBInput label='Salary' id='salary'
                                             type='text' onChange={handleChange} value={values.salary} rows={4} />
                                     </div>
 
@@ -100,10 +104,7 @@ const Add_jobs = () => {
                                             type='text' onChange={handleChange} value={values.batch} rows={4} />
                                     </div>
 
-                                    <div className="mt-3">
-                                        <MDBTextArea label='Designation' id='designation'
-                                            type='text' onChange={handleChange} value={values.designation} rows={4} />
-                                    </div>
+                                   
 
                                     <div className="mt-3">
                                         <MDBTextArea label='Roles and Responsibility' id='roles_responsibility'
