@@ -48,6 +48,16 @@ router.get('/getbyemail/:useremail', (req,res) => {
         res.status(500).json(err);
     });
 });
+
+router.put('/update/:id', (req,res) => {
+    Model.findByIdAndUpdate(req.params.id, req.body, {new : true})
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 //using colon means it is url parameter.
 //post use body, get use params
 

@@ -5,6 +5,9 @@ const mySchema = new Schema({
   name: String,
   email: { type: String, unique: true },
   password: String,
+  companyName: String,
+  officalWebsite: String,
+  about: String,
   createdAt: Date,
   verified: { type: Boolean, default: false }
 });
