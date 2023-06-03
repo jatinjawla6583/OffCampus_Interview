@@ -20,8 +20,16 @@ const ListCompanies = () => {
         getCompanies();
     }, []);
 
-    const sendMail = async (id) => {
-        
+    const sendMail = async (to, subject, html) => {
+        const res = await fetch(`${apiUrl}/util/sendMail`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ to, subject, html }),
+        });
+
+        console.log(res.status);
     }
 
     const subscribe = async (id) => {
@@ -65,6 +73,10 @@ const ListCompanies = () => {
                     <h2>{company.description}</h2>
 
                     <button className='btn btn-primary' onClick={e => subscribe(company._id)}>Subscribe</button>
+
+                    <button onClick={e => {
+                        sendMail(currentUser.email, 'Test Mail', '<h1>Test Mail</h1>')
+                    }}>Send Mail</button>
                 </div>
             )
         })
