@@ -54,7 +54,7 @@ const NavBar = () => {
     return (
         <div>
 
-            <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor:'red'}}>
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor:'black'}}>
 
 
                 {/* Container wrapper */}
