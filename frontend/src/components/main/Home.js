@@ -41,7 +41,7 @@ const Home = () => {
               >
                 <div className="card-body px-4 py-5 px-md-5">
                   <h1 className="display-3 fw-bold ls-tight mb-4">
-                    <span>find your dream job here</span> <br />
+                    <span className ='text-white'>find your dream job here</span> <br />
                     <span className="" style={{color : '#8839da'}}>with no Effort</span>
                   </h1>
                   <Link

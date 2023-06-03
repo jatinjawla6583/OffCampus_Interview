@@ -78,6 +78,9 @@ const NavBar = () => {
                             {/* <NavLink className="nav-link text-white" aria-current="page" to="/main/home">
                                 <b>HOME</b>
                             </NavLink> */}
+                            <NavLink className="nav-link text-white" aria-current="page" to="/main/HOME">
+                                <b>HOME</b>
+                            </NavLink>
                             <NavLink className="nav-link text-white" aria-current="page" to="/company/company_profile">
                                 <b>PROFILE</b>
                             </NavLink>
