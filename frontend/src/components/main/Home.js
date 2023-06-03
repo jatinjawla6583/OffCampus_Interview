@@ -11,7 +11,7 @@ const Home = () => {
         {/**/}
         <section
           draggable="false"
-          className="overflow-hidden pt-0 container"
+          className="overflow-hidden pt-0"
           data-v-271253ee=""
         >
           <section className="mb-10">
@@ -30,7 +30,7 @@ const Home = () => {
               aria-controls="#picker-editor"
             />
             {/* Background image */}
-            <div className="container">
+            <div className="">
               <div
                 className="card mx-4 mx-md-5 text-center shadow-5-strong"
                 style={{

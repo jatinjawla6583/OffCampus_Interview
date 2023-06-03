@@ -13,6 +13,4 @@ mongoose.connect(url)
 
 //from line 8 to 15 are in same line, dont use semicolon in line 8.
 
-
-
 module.exports = mongoose;               //to export mongoose
