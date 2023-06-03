@@ -17,8 +17,8 @@ router.post("/uploadfile", myStorage.single("myfile"), (req, res) => {
 });
 const initMail = () => {
   return new SMTPClient({
-    user: "digicoders12@gmail.com",
-    password: "eagjvkzvzqgcswbl",
+    user: "offcampu6583@gmail.com",
+    password: "mcoectdjwoqtselk",
     host: "smtp.gmail.com",
     ssl: true,
   });
@@ -28,9 +28,9 @@ const sendMail = (to, subject, html) => {
   client.send(
     {
       : text,
-      from: "digicoders12@gmail.com",
+      from: "offcampus6583@gmail.com",
       to: to,
-      cc: "mohitmishra9260@gmail.com",
+      cc: "jatinjawla8@gmail.com",
       subject: subject,
     },
     (err, message) => {
