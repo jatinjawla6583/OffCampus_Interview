@@ -37,8 +37,8 @@ const All_Drives = () => {
 
 
     useEffect(() => {
-        // fetchAllDriveData();
-        fetchAllProfile();
+        fetchAllDriveData();
+        // fetchAllProfile();
     }, []);
 
     const displayDriveData = () => {
@@ -46,8 +46,8 @@ const All_Drives = () => {
             return (
                 allDrivesData.map((drive, index) => (
 
-                    <div className="row justify-content-center mb-3" key={drive._id}>
-                        <div className="col-md-12 col-xl-12">
+                    <div className="row justify-content-center mb-3" >
+                        <div className="col-md-12 col-xl-12" key={drive._id}>
                             <div className="card shadow-0 border rounded-3">
                                 <div className="card-body">
                                     <div className="row">
