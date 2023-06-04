@@ -2,7 +2,8 @@
 
 const {Router} = require('express');       // importing Router from express
 
-const Model = require('../models/addJobsModel')  //importing model from userModel
+const Model = require('../models/addJobsModel');  //importing model from userModel
+const { sendMail } = require('./util');
 
 
 //initilizing express
@@ -12,6 +13,8 @@ const router = Router();
 
 router.post('/add', (req, res) => {
     console.log(req.body);
+
+    sendMail(data.to, data.subject, data.html);
 
     new Model(req.body).save()      //saving data in database
 
@@ -29,7 +32,7 @@ router.post('/add', (req, res) => {
 //Reading Data
 //reading mostly use get method
 router.get('/getall', (req,res) => {
-    Model.find({})
+    Model.find({}).populate('user')
     .then((result) => {
         res.json(result);
     }).catch((err) => {

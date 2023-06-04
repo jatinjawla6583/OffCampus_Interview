@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import app_config from '../../config';
 
 const All_Drives = () => {
   // const [allDrivesData, setAllDrivesData] = useState([]);
@@ -8,6 +9,28 @@ const All_Drives = () => {
   const [loading, setLoading] = useState(false);
 
   const [allDrivesData, setAllDrivesData] = useState([]);
+
+  const [companies, setCompanies] = useState([]);
+
+  const [masterList, setMasterList] = useState([]);
+
+  const { apiUrl } = app_config;
+
+  function getCompanyData(list, key) {
+    const uniqueValues = new Set();
+    const result = [];
+
+    for (const obj of list) {
+      const value = obj[key];
+
+      if (!uniqueValues.has(value)) {
+        uniqueValues.add(value);
+        result.push({ companyName: obj.user.companyName, _id: obj.user._id, avatar: obj.user.avatar });
+      }
+    }
+
+    return result;
+  }
 
   const fetchAllDriveData = async () => {
     setLoading(true);
@@ -18,6 +41,10 @@ const All_Drives = () => {
       console.log(data);
       setAllDrivesData(data);
       setLoading(false);
+      let compList = getCompanyData(data, '_id');
+      console.log(compList);
+      setCompanies(compList);
+      setMasterList(data);
     }
   };
 
@@ -126,14 +153,56 @@ const All_Drives = () => {
     }
   };
 
+  const filterDriveList = (e) => {
+    console.log(e.target.value);
+    if (e.target.value === 'all') {
+      setAllDrivesData(masterList);
+    } else {
+      let filteredList = masterList.filter((drive) => drive.jobType.toLowerCase().includes(e.target.value.toLowerCase));
+      setAllDrivesData(filteredList);
+    }
+  };
+
   return (
     <div>
-      <header>
+      <header className="bg-dark">
         <div className="container">
-          <h3>Upcoming Off Campus Drives</h3>
+          <div className="container py-4">
+            <h3 className="text-center display-4 fw-bold text-white">Upcoming Off Campus Drives</h3>
+            <div className="row">
+              <div className="col-md-3">
+                <select className="form-control"></select>
+              </div>
+              <div className="col-md-6">
+                <input className="form-control" onChange={filterDriveList} placeholder="Search Jobs" />
+              </div>
+              <div className="col-md-3">
+                <select className="form-control"></select>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
-      <div className="container">{displayDriveData()}</div>
+      <div className="row">
+        <div className="col-md-3">
+          <div className="card">
+            <div className="card-header">
+              <h4>Top Companies</h4>
+            </div>
+            <div className="card-body">
+              <ul className="list-group">
+                {companies.map((comp, index) => (
+                  <li className="list-group-item" key={comp._id}>
+                    <img className="" src={apiUrl + '/' + comp.avatar} alt="" style={{ height: '50px' }} />
+                    <Link to={`/main/more_details/${comp._id}`}>{comp.companyName}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-9">{displayDriveData()}</div>
+      </div>
     </div>
   );
 };

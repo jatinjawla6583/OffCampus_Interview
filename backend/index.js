@@ -6,7 +6,7 @@ const addJobsRouter = require('./routers/addJobsRouter');
 const profileRouter = require('./routers/profileRouter');
 const companyRouter = require('./routers/companyRouter');
 const subscriptionRouter = require('./routers/subscriptionRouter');
-const utilRouter = require('./routers/util');
+const {router}= require('./routers/util');
 
 
 // const feedbackRouter = require('./routers/feedbackRouter');
@@ -32,7 +32,9 @@ app.use('/add_jobs', addJobsRouter); //sending request to addJobsRouter
 app.use('/profile', profileRouter); //sending request to addJobsRouter
 app.use('/company', companyRouter); //sending request to addJobsRouter
 app.use('/subscription', subscriptionRouter); //sending request to addJobsRouter
-app.use('/util', utilRouter); //sending request to addJobsRouter
+app.use('/util', router); //sending request to addJobsRouter
+
+app.use(express.static('./static/uploads'));
 
 //to start express server
 app.listen(port, () => {

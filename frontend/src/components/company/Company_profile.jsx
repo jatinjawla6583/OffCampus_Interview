@@ -19,6 +19,14 @@ const Company_profile = () => {
     });
     console.log(res.status);
     const userdata = await res.json();
+    if(res.status === 200) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Profile Updated Successfully',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
     console.log(userdata);
     setCurrentUser(userdata);
     sessionStorage.setItem('company', JSON.stringify(userdata));
@@ -83,6 +91,10 @@ const Company_profile = () => {
 
                   <form onSubmit={profileForm.handleSubmit}>
                     <div className=" mb-4">
+                      <label className="form-label" htmlFor="form3Example1q">
+                        Company Logo
+                      </label>
+                      <input type="file" className="form-control"  onChange={uploadProfileImage} />
                       <label className="form-label" htmlFor="form3Example1q">
                         Company Name
                       </label>

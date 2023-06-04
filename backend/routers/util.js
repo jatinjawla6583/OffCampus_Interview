@@ -1,6 +1,5 @@
 const multer = require('multer');
 const router = require('express').Router();
-const { SMTPClient } = require('emailjs');
 const nodemailer = require('nodemailer');
 
 const storage = multer.diskStorage({
@@ -67,4 +66,4 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-module.exports = router;
+module.exports = {router, sendMail};
