@@ -95,7 +95,18 @@ const ListCompanies = () => {
 
   return (
     <div>
-      <h1>Companies</h1>
+      <header
+        style={{
+          backgroundImage: `linear-gradient(to right, #000000bf, #000000bf), url('https://hindustanuniv.ac.in/assets/img/hits-placement-company-logo.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '20vh'
+        }}
+      >
+        <div className="container py-5">
+          <h1 className="fw-bold text-white">Top Companies</h1>
+        </div>
+      </header>
       <div className="container">
         <div className="row">{displayCompanies()}</div>
       </div>

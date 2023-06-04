@@ -66,4 +66,36 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-module.exports = {router, sendMail};
+
+const getMailTemplate = (companyData, driveData) => {
+  return `<div style="padding: 100px;">
+  <h1 style="text-align: center;">OffCampus Drive Updates</h1>
+
+  <div style="border: 2px solid black;border-radius: 10px;padding: 50px;">
+      <p>Company Details</p>
+      <div style="margin-left: 30px;">
+          <h3>Company Name : <span>${companyData.name}</span></h3>
+          <h3>Company Website : <span>${companyData.officalWebsite}</span></h3>
+          
+      </div>
+      <hr />
+      <p>Drive Details</p>
+      <div style="margin-left: 30px;">
+          <h3>Job Type : <span>${driveData.jobType}</span></h3>
+          <h3>Job Designation : <span>${driveData.designation}</span></h3>
+          <h3>Eligibility : <span>${driveData.course_branch}</span></h3>
+          <h3>Salary : <span>${driveData.salary}</span></h3>
+          <h3>Drive Date : <span>${new Date(driveData.lastDate).toLocaleDateString()}</span></h3>
+          <h3>Drive Location : <span>${driveData.interviewLocation}</span></h3>
+          <h3>Last Date To Apply : <span>${new Date(driveData.lastDate).toLocaleDateString()}</span></h3>
+          <br />
+          <a href="${
+            driveData.reg_Link
+          }" style="color : white; background-color: crimson; padding: 10px 20px;font-size: 1.1em;border: none;border-radius: 5px;text-decoration: none;">Apply Here</a>
+          
+      </div>
+  </div>  
+</div>`;
+};
+
+module.exports = { router, sendMail, getMailTemplate };

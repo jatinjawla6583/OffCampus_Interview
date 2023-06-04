@@ -3,22 +3,41 @@
 const {Router} = require('express');       // importing Router from express
 
 const Model = require('../models/addJobsModel');  //importing model from userModel
-const { sendMail } = require('./util');
+const { sendMail, getMailTemplate } = require('./util');
+const subscriptionModel = require('../models/subscriptionModel');
 
 
 //initilizing express
 // const router = express.Router();
 
+const getSubscribedUserEmails = (companyId, cb) => {
+    subscriptionModel.find({company: companyId})
+    .populate('user')
+    .then((result) => {
+        const emails = result.map((item) => item.user.email);
+        cb(emails);
+    })
+    .catch((err) => {
+        console.log(err);
+        cb([]);
+    })
+}
+
 const router = Router();
 
 router.post('/add', (req, res) => {
     console.log(req.body);
+    const {companyData, driveData} = req.body;
+    // sendMail(data.to, data.subject, getMailTemplate(companyData, driveData));
 
-    sendMail(data.to, data.subject, data.html);
-
-    new Model(req.body).save()      //saving data in database
-
+    new Model(driveData).save()      //saving data in database
     .then((result) => {
+        getSubscribedUserEmails(companyData._id, (emails) => {
+            emails.forEach((email) => {
+                console.log(email);
+                sendMail(email, 'Off Campus Drive Updates', getMailTemplate(companyData, driveData));
+            })
+        })
         res.json(result)   //converting result into json
     }).catch((err) => {
         console.log(err);

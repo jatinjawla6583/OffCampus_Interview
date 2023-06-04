@@ -14,7 +14,7 @@ const Add_jobs = () => {
     const jobData = async (formdata, { resetForm }) => {
         const res = await fetch('http://localhost:5000/add_jobs/add', {
             method: 'POST',
-            body: JSON.stringify(formdata),
+            body: JSON.stringify({companyData : currentUser, driveData : formdata}),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -31,7 +31,7 @@ const Add_jobs = () => {
             })
             const data = await res.json();
             console.log(data)
-            resetForm();
+            // resetForm();
         }
     }
 
@@ -44,6 +44,7 @@ const Add_jobs = () => {
         <div className='add_jobs_bg_image'>
             <div className="card w-75 mx-auto rounded-5">
                 <div className="card-body">
+                    {/* <button className='btn btn-primary'>Notify</button> */}
                     <h1 className="card-title text-center">ADD YOUR JOB HERE</h1>
 
                     <Formik
