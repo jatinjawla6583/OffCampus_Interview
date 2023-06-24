@@ -54,7 +54,8 @@ const ListCompanies = () => {
 
       const data = await res.json();
       console.log(data);
-      if (data.status === 200) {
+      
+      if (res.status === 200) {
         Swal.fire({
           icon: 'success',
           title: 'Success',
