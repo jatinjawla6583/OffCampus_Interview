@@ -93,4 +93,4 @@ const CompanyLogin = () => {
   );
 };
 
-export default CompanyLogin;
+export default CompanyLogin

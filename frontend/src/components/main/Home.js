@@ -21,7 +21,7 @@ const Home = () => {
               className="p-5 text-center bg-image"
               style={{
                 backgroundImage:
-                  'url("https://www.simplilearn.com/ice9/free_resources_article_thumb/SEO-Interview-questions-article-2.jpg")',
+                  'url("https://imageio.forbes.com/specials-images/imageserve/609eb8b9a0f6100ff004ce65/Millions-of-workers-plan-to-switch-jobs-post-COVID-/960x0.jpg?format=jpg&width=960")',
                 height: '70vh',
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -41,7 +41,7 @@ const Home = () => {
               >
                 <div className="card-body px-4 py-5 px-md-5">
                   <h1 className="display-3 fw-bold ls-tight mb-4">
-                    <span className ='text-white'>find your dream job here</span> <br />
+                    <span className ='text-black'>find your dream job here</span> <br />
                     <span className="" style={{color : '#8839da'}}>with no Effort</span>
                   </h1>
                   <Link
@@ -88,6 +88,12 @@ const Home = () => {
                       />
                     </div>
                   </div>
+                  <img
+                      src="https://img.etb2bimg.com/files/cp/upload-1625459931-seo.png"
+                      className="w-100"
+                      alt=""
+                      aria-controls="#picker-editor"
+                    />
                   <div className="card-body">
                     <h3 className="fw-bold text-primary mb-3">1000</h3>
                     <h5 className="text-muted mb-3">Components</h5>
@@ -110,6 +116,12 @@ const Home = () => {
                       />
                     </div>
                   </div>
+                  <img
+                      src="https://www.shutterstock.com/image-vector/career-development-concept-flat-vector-260nw-1531285961.jpg"
+                      className="w-100"
+                      alt=""
+                      aria-controls="#picker-editor"
+                    />
                   <div className="card-body">
                     <h3 className="fw-bold text-primary mb-3">70%</h3>
                     <h5 className="text-muted mb-3">Growth</h5>
@@ -132,6 +144,12 @@ const Home = () => {
                       />
                     </div>
                   </div>
+                  <img
+                      src="https://imageio.forbes.com/specials-images/imageserve/633a774a842d06ecd68286ff/0x0.jpg?format=jpg&width=1200"
+                      className="w-100"
+                      alt=""
+                      aria-controls="#picker-editor"
+                    />
                   <div className="card-body">
                     <h3 className="fw-bold text-primary mb-3">49</h3>
                     <h5 className="text-muted mb-3">company</h5>
@@ -165,7 +183,7 @@ const Home = () => {
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://mdbootstrap.com/img/new/standard/city/018.jpg"
+                      src="https://img.etb2bimg.com/files/cp/upload-1625459931-seo.png"
                       className="w-100"
                       alt=""
                       aria-controls="#picker-editor"
@@ -178,7 +196,7 @@ English Edition | 02 June, 2023, 05:23 PM IST | Today's Paper</h5>
                       className="fas fa-globe-americas me-2"
                       aria-controls="#picker-editor"
                     />
-                    <span>Travels</span>
+                    <span>NEWS</span>
                   </div>
                   <p className="text-muted">
                   Mastering the game of entrepreneurship: The key to long-term success of your venture
@@ -197,7 +215,7 @@ e faced unexpected challenges and found solutions rather than giving up.
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://mdbootstrap.com/img/new/standard/city/032.jpg"
+                      src="https://1.bp.blogspot.com/-PURtt_JRkMo/WiMt2JuAPkI/AAAAAAAAA3U/Urtupv7diq4zRpaohaQc4Xm5fE-azl08QCLcBGAs/s1600/1288bc_35e1e1d7df744822a285e0062ab8bcc5.jpg_srz_614_440_85_22_0.50_1.20_0.00_jpg_srz.jpg"
                       className="w-100"
                       alt=""
                       aria-controls="#picker-editor"
@@ -228,7 +246,7 @@ ew with a list of essential questions that pertains to the employment period, ob
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://mdbootstrap.com/img/new/standard/city/059.jpg"
+                      src="https://cloudinary.hbs.edu/hbsit/image/upload/s--EmT0lNtW--/f_auto,c_fill,h_375,w_750,/v20200101/6978C1C20B650473DD135E5352D37D55.jpg"
                       className="w-100"
                       alt=""
                       aria-controls="#picker-editor"
@@ -277,7 +295,7 @@ A well-structured board meeting is crucial for making important decisions, raisi
                     style={{ marginTop: "-15px" }}
                   >
                     <img
-                      src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg"
+                      src="https://th.bing.com/th/id/OIP.SY5zTPBfLCbZmOIhHYNISwHaFZ?pid=ImgDet&rs=1"
                       className="w-100"
                       alt=""
                       aria-controls="#picker-editor"
@@ -304,9 +322,10 @@ A well-structured board meeting is crucial for making important decisions, raisi
                       </li>
                     </ul>
                     <p className="card-text">
-                      Ut pretium ultricies dignissim. Sed sit amet mi eget urna
-                      placerat vulputate. Ut vulputate est non quam dignissim
-                      elementum. Donec a ullamcorper diam.
+                    Web developers work independently as freelancers or with company teams to create websites. These professionals
+                     may focus on front-end or back-end development, depending on their specific roles.
+
+
                     </p>
                   </div>
                 </div>
@@ -319,7 +338,7 @@ A well-structured board meeting is crucial for making important decisions, raisi
                     style={{ marginTop: "-15px" }}
                   >
                     <img
-                      src="https://mdbcdn.b-cdn.net/img/new/avatars/6.jpg"
+                      src="https://th.bing.com/th/id/OIP.ZdqjGs5FDllVdzEyFbSDxAHaE8?pid=ImgDet&rs=1"
                       className="w-100"
                       alt=""
                       aria-controls="#picker-editor"
@@ -346,9 +365,10 @@ A well-structured board meeting is crucial for making important decisions, raisi
                       </li>
                     </ul>
                     <p className="card-text">
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium accusamus voluptatum deleniti
-                      atque corrupti.
+                    A marketing specialist is someone who, as the name suggests, specializes within a particular area of marketing, such as in
+                    fluencer marketing, SEO, social media, 
+                    email marketing, field and event marketing, market research, branding, paid media, content marketing, copywriting, and so 
+                    forth
                     </p>
                   </div>
                 </div>
@@ -361,7 +381,7 @@ A well-structured board meeting is crucial for making important decisions, raisi
                     style={{ marginTop: "-15px" }}
                   >
                     <img
-                      src="https://mdbcdn.b-cdn.net/img/new/avatars/18.jpg"
+                      src="https://th.bing.com/th/id/OIP.oPbo8xwvZc9w2Zc0nZXFuQHaEc?pid=ImgDet&rs=1"
                       className="w-100"
                       alt=""
                       aria-controls="#picker-editor"
@@ -388,9 +408,9 @@ A well-structured board meeting is crucial for making important decisions, raisi
                       </li>
                     </ul>
                     <p className="card-text">
-                      Enim ad minima veniam, quis nostrum exercitationem ullam
-                      corporis suscipit laboriosam, nisi ut aliquid commodi quis
-                      nostrum minima.
+                    Public relations (PR) is a communication process that strategically builds relationships between an organization and its
+                     public12. It is the practice of managing and 
+                    disseminating information from an individual or an organization to the public in order to influence their perception
                     </p>
                   </div>
                 </div>
