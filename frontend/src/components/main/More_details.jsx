@@ -84,9 +84,6 @@ const More_details = () => {
         )
     }
 
-
-
-
     return (
         <div style={{minHeight: '100vh', backgroundSize: 'cover', backgroundImage: `url('https://i.ytimg.com/vi/Gt50EPvMzXc/maxresdefault.jpg')`}}>
 
