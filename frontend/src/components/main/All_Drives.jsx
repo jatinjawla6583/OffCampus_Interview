@@ -77,6 +77,7 @@ const All_Drives = () => {
                 <span>Registration Link : {drive.reg_Link}</span>
               </div>
               <p className="text-truncate mb-4 mb-md-0">Last Date : {new Date(drive.lastDate).toLocaleDateString()}</p>
+              <Link to={`/main/more_details/${drive._id}`} className='btn btn-primary mt-3'>View More</Link>
             </div>
           </div>
         </div>
@@ -164,7 +165,7 @@ const All_Drives = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <header className="bg-dark">
         <div className="container">
           <div className="container py-4">
@@ -183,7 +184,7 @@ const All_Drives = () => {
           </div>
         </div>
       </header>
-      <div className="row">
+      <div className="row mt-5">
         <div className="col-md-3">
           <div className="card">
             <div className="card-header">
@@ -193,15 +194,17 @@ const All_Drives = () => {
               <ul className="list-group">
                 {companies.map((comp, index) => (
                   <li className="list-group-item" key={comp._id}>
-                    <img className="" src={apiUrl + '/' + comp.avatar} alt="" style={{ height: '50px' }} />
-                    <Link to={`/main/more_details/${comp._id}`}>{comp.companyName}</Link>
+                    <img className="img-fluid" src={apiUrl + '/' + comp.avatar} alt="" style={{ height: '50px' }} />
+                    <h3>{comp.companyName}</h3>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
-        <div className="col-md-9">{displayDriveData()}</div>
+        <div className="col-md-9">
+          <div className="row">{displayDriveData()}</div>
+        </div>
       </div>
     </div>
   );

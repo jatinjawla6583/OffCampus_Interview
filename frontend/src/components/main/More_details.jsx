@@ -32,7 +32,7 @@ const More_details = () => {
 
     const displayDetails = () => {
         return (
-            <div className="card border border-success mt-2">
+            <div className="card border border-success">
                 <div className="card-body">
                     <h2 className="card-title">{drive.jobType}</h2>
 
@@ -88,8 +88,11 @@ const More_details = () => {
 
 
     return (
-        <div className='container'>
+        <div style={{minHeight: '100vh', backgroundSize: 'cover', backgroundImage: `url('https://i.ytimg.com/vi/Gt50EPvMzXc/maxresdefault.jpg')`}}>
+
+        <div className='container pt-5'>
             {displayDetails()}
+        </div>
         </div>
     )
 }
